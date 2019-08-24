@@ -1,0 +1,119 @@
+/*
+
+ - NAME : MD FILE ICONS
+ - VERSION : 1.0
+ - DESCRIPTION : MATERIAL DESIGN FILE ICONS BASED ON CSS
+ - AUTHOR : DJAMEL EDDINE KOREI
+ - LICENSE : MIT LICENSE
+
+*/
+
+@import "./variable";
+
+.md-file {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: $md-file-ratio-md;
+  width: $md-file-ratio-md * 3;
+  height: $md-file-ratio-md * 3;
+  background: $md-file-background;
+  color: $md-file-color;
+  font-weight: $md-file-font-weight;
+  font-size: $md-file-font-size-md;
+  box-shadow: $md-file-box-shadow;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: $md-file-ratio-md;
+    width: $md-file-ratio-md * 2;
+    left: 0;
+    top: -$md-file-ratio-md;
+    background-color: #4b5066;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    right: 0;
+    top: -$md-file-ratio-md;
+    border: solid #3b4052;
+    border-width: $md-file-ratio-md / 2;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.125);
+  }
+
+  &.md-file-sm {
+    margin-top: $md-file-ratio-sm;
+    width: $md-file-ratio-sm * 3;
+    height: $md-file-ratio-sm * 3;
+    font-size: $md-file-font-size-sm;
+
+    &::before {
+      height: $md-file-ratio-sm;
+      width: $md-file-ratio-sm * 2;
+      top: -$md-file-ratio-sm;
+    }
+
+    &::after {
+      top: -$md-file-ratio-sm;
+      border-width: $md-file-ratio-sm / 2;
+    }
+  }
+
+  &.md-file-lg {
+    margin-top: $md-file-ratio-lg;
+    width: $md-file-ratio-lg * 3;
+    height: $md-file-ratio-lg * 3;
+    font-size: $md-file-font-size-lg;
+
+    &::before {
+      height: $md-file-ratio-lg;
+      width: $md-file-ratio-lg * 2;
+      top: -$md-file-ratio-lg;
+    }
+
+    &::after {
+      top: -$md-file-ratio-lg;
+      border-width: $md-file-ratio-lg / 2;
+    }
+  }
+
+  &.md-file-xl {
+    margin-top: $md-file-ratio-xl;
+    width: $md-file-ratio-xl * 3;
+    height: $md-file-ratio-xl * 3;
+    font-size: $md-file-font-size-xl;
+
+    &::before {
+      height: $md-file-ratio-xl;
+      width: $md-file-ratio-xl * 2;
+      top: -$md-file-ratio-xl;
+    }
+
+    &::after {
+      top: -$md-file-ratio-xl;
+      border-width: $md-file-ratio-xl / 2;
+    }
+  }
+
+  @each $color, $value in $md-color {
+    &.md-file-#{$color} {
+      background-color: $value;
+
+      &::before {
+        background-color: $value;
+      }
+
+      &::after {
+        border-left-color: darken($value, 15%);
+        border-bottom-color: darken($value, 15%);
+      }
+    }
+  }
+}
