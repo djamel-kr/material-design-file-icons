@@ -1,27 +1,28 @@
 {
   "name": "md-file-icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "material design file icons based on css",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2",
-    "bootstrap": "^4.3.1"
+  "author": "Djamel Eddine Korei",
+  "license": "MIT",
+  "main": "dist/md-file-icons.css",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@fortawesome/fontawesome-free": ">=5.0.6",
+    "bootstrap": ">=4.0.0"
   },
   "devDependencies": {
     "gulp-sass": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp": "^4.0.2"
   },
-  "scripts": {
-    "build": "gulp build",
-    "watch": "gulp watch"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/djamel-kr/md-file-icons.git"
   },
-  "author": "Djamel Eddine Korei",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/djamel-kr/md-file-icons/issues"
   },
